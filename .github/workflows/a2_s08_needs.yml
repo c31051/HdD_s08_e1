@@ -1,0 +1,9 @@
+name: a2_s08_needs
+on:
+  workflow_dispatch:
+jobs:
+  imp1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "ok remoto"
