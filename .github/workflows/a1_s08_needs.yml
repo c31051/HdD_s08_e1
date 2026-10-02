@@ -7,4 +7,10 @@ jobs:
     steps:
       - run: |
           sleep 10
-          echo "ok"
+          echo "ok 1"
+  imp2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          sleep 10
+          echo "ok 2"
