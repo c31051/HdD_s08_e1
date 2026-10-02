@@ -1,0 +1,30 @@
+name: a4_s08_cache
+on:
+  workflow_dispatch:
+jobs:
+  txt_keycache:
+    name: ejemplo_txt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+#      - name: Cache
+#        uses: actions/cache@v4
+#        with:
+#          path: carpeta_descarga
+#          key: mi-archivo-pesado-v2
+
+      - name: Descargar
+        run: |
+          mkdir -p carpeta_descarga
+          for i in {1..9}
+          do
+            archivo="carpeta_descarga/txt_$i.txt"
+            if [ -f "$archivo" ]; then
+              echo "cache ejecutado $i"
+            else
+              echo "Realizado" > "$archivo"
+              echo "Actividades tardadas $i."
+            fi
+          done
