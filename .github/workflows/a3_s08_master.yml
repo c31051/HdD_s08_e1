@@ -2,8 +2,11 @@ name: a3_s08_master
 on:
   workflow_dispatch:
 jobs:
-  imp1:
+  activar-otro:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "ok master"
+      - name: llamado1
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: a2_s08_needs.yml
+          token: ${{ secrets.GITHUB_TOKEN }}
