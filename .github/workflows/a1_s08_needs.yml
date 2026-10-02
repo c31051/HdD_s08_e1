@@ -4,7 +4,7 @@ on:
 jobs:
   imp1:
     name: Imp. 1
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Unico
         run: |
