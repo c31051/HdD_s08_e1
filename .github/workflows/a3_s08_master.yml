@@ -1,6 +1,8 @@
 name: a3_s08_master
 on:
   workflow_dispatch:
+permissions:
+  actions: write
 jobs:
   activar-otro:
     runs-on: ubuntu-latest
